@@ -246,6 +246,17 @@ require('lazy').setup({
   },
 
   {
+    "NeogitOrg/neogit",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "sindrets/diffview.nvim",
+
+      "nvim-telescope/telescope.nvim",
+    },
+    config = true
+  },
+
+  {
     -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
@@ -256,6 +267,10 @@ require('lazy').setup({
 
   {
     'pocco81/auto-save.nvim',
+  },
+  
+  {
+    'stevearc/oil.nvim'
   },
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
@@ -374,6 +389,9 @@ require('telescope').setup {
     },
   },
 }
+
+-- [[ Configure oil ]]
+require("oil").setup()
 
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
