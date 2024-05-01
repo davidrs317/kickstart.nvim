@@ -112,6 +112,8 @@ require('lazy').setup({
     },
   },
 
+  'm4xshen/autoclose.nvim',
+
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim', opts = {} },
   {
